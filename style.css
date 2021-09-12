@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap');
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none; /* Outline: Um contorno é uma linha desenhada fora da borda do elemento.*/
+    text-decoration: none; /*ex: underlaine*/
+    text-transform: capitalize; /* capitalize: primeira letra de cada palavra maiuscula*/
+    transition: .2s linear;
+}
+
+.container{
+    background: linear-gradient(45deg, blueviolet, lightgreen);
+    padding: 9px 9%;
+    padding-bottom: 100px;
+    min-height: 100vh;
+}
+.container .title{
+    text-align: center;
+    padding-bottom: 15px;
+    color: #fff;
+    text-shadow: 0 5px 10px rgba(0,0,0,.2);
+    font-size: 50px;
+}
+
+.container .box-container{
+    display: grid; /*Um layout de grade consiste em um elemento pai, com um ou mais elementos filhos*/
+    grid-template-columns: repeat(auto-fit, minmax(270px,1fr)); /*define o número de colunas em seu layout de grade e pode definir a largura de cada coluna.*/
+   
+    gap: 15px; /*Os espaços entre cada coluna / linha são chamados de gap*/
+
+    /*auto-fit, o conteúdo se estenderá para preencher toda a largura da linha*/
+    
+    /*a repeat()função permite que você repita as colunas quantas vezes forem necessárias.*/
+    
+    /*usando a minmax(): especificando uma largura mínima para as colunas*/
+    
+    /*O 1fr é o que informa ao navegador para distribuir o espaço entre as colunas para que cada coluna recebe igualmente uma fração desse espaço. Ou seja, são todas colunas fluidas e de largura igual.*/
+    
+}
+
+.container .box-container .box{
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    border-radius: 5px;
+    background: #fff;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+
+.container .box-container .box img{
+    height: 130px;
+}
+
+.container .box-container .box h3{
+    color: #444;
+    font-size: 22px;
+    padding: 10px 0;
+}
+
+.container .box-container .box p{
+    color: #777;
+    font-size: 15px;
+    line-height: 1.8; /*espaçamento entre as linhas*/
+}
+
+.container .box-container .box .btn{
+    background: #333;
+    color: #fff;
+    margin-top: 10px;
+    display: inline-block;
+    font-size: 17px;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+.container .box-container .box .btn:hover{
+    letter-spacing: 1px; /*espaçamento entre as letras*/
+}
+.container .box-container .box:hover{
+    box-shadow: 0 10px 15px rgba(0,0,0,.3); /*sombra da caixa*/
+    transform: scale(1.03);
+}
+
+@media (max-width:768px){
+    .container{
+        padding: 20px;
+    }
+}
